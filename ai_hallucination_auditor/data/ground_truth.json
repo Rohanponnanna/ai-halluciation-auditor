@@ -1,0 +1,512 @@
+{
+  "Finance": [
+    {
+      "id": "FIN_001",
+      "prompt": "What is the current GST rate for SaaS software services in India?",
+      "ground_truth": "18% GST applies to SaaS/software services in India under SAC code 9983.",
+      "risk_level": "critical",
+      "keywords": ["18%", "9983", "SAC", "software"],
+      "numbers": ["18"],
+      "source": "GST Council, Notification No. 11/2017",
+      "financial_impact": "Tax liability miscalculation"
+    },
+    {
+      "id": "FIN_002",
+      "prompt": "What is the TDS rate under Section 194J for professional and technical services?",
+      "ground_truth": "TDS under Section 194J is 10% for professional services and 2% for technical services as amended by Finance Act 2020.",
+      "risk_level": "critical",
+      "keywords": ["194J", "10%", "2%", "professional", "technical"],
+      "numbers": ["10", "2"],
+      "source": "Income Tax Act Section 194J, Finance Act 2020",
+      "financial_impact": "TDS default penalties up to 100% of tax"
+    },
+    {
+      "id": "FIN_003",
+      "prompt": "What is the GST registration turnover threshold for service businesses in India?",
+      "ground_truth": "Rs 20 lakhs for most states; Rs 10 lakhs for special category states like Manipur, Mizoram, Nagaland, Tripura.",
+      "risk_level": "high",
+      "keywords": ["20 lakhs", "10 lakhs", "special category"],
+      "numbers": ["20", "10"],
+      "source": "CGST Act 2017 Section 22",
+      "financial_impact": "Penalty for non-registration up to Rs 25,000"
+    },
+    {
+      "id": "FIN_004",
+      "prompt": "What is the Section 43B(h) rule about MSME payments introduced in Finance Act 2023?",
+      "ground_truth": "Payments to MSMEs must be made within 45 days (15 days if no agreement) else deduction disallowed in same year and allowed only in the year of actual payment.",
+      "risk_level": "critical",
+      "keywords": ["43B", "45 days", "15 days", "MSME", "disallowed"],
+      "numbers": ["45", "15"],
+      "source": "Finance Act 2023, Section 43B(h)",
+      "financial_impact": "Tax disallowance on entire MSME payables"
+    },
+    {
+      "id": "FIN_005",
+      "prompt": "What is the corporate tax rate for domestic companies in India for FY 2024-25?",
+      "ground_truth": "Base rate 30% for companies with turnover above Rs 400 crore; 25% for companies with turnover up to Rs 400 crore. Effective rate after surcharge and cess is 25.17% under Section 115BAA.",
+      "risk_level": "high",
+      "keywords": ["30%", "25%", "400 crore", "115BAA", "25.17%"],
+      "numbers": ["30", "25", "400", "25.17"],
+      "source": "Income Tax Act, Finance Act 2024",
+      "financial_impact": "Incorrect tax provision in financial statements"
+    },
+    {
+      "id": "FIN_006",
+      "prompt": "What is the penalty for late filing of GST returns under CGST Act?",
+      "ground_truth": "Late fee of Rs 50 per day (Rs 25 CGST + Rs 25 SGST) for returns with tax liability; Rs 20 per day (Rs 10 CGST + Rs 10 SGST) for nil returns. Maximum Rs 5,000 per return.",
+      "risk_level": "medium",
+      "keywords": ["50 per day", "25", "20 per day", "5000", "nil"],
+      "numbers": ["50", "25", "20", "10", "5000"],
+      "source": "CGST Act Section 47",
+      "financial_impact": "Recurring penalty accumulation"
+    },
+    {
+      "id": "FIN_007",
+      "prompt": "What is the EPF contribution rate for employer and employee in India?",
+      "ground_truth": "Employee contributes 12% of basic salary. Employer also contributes 12% but it is split: 3.67% to EPF, 8.33% to EPS, and 0.5% to EDLI. Employer also pays 0.5% admin charges.",
+      "risk_level": "high",
+      "keywords": ["12%", "3.67%", "8.33%", "EPS", "EDLI", "0.5%"],
+      "numbers": ["12", "3.67", "8.33", "0.5"],
+      "source": "EPF & MP Act 1952",
+      "financial_impact": "Provident Fund default leads to prosecution"
+    },
+    {
+      "id": "FIN_008",
+      "prompt": "What are the income tax slab rates for individuals under new tax regime FY 2024-25?",
+      "ground_truth": "New regime slabs: 0% up to Rs 3 lakh, 5% Rs 3-7 lakh, 10% Rs 7-10 lakh, 15% Rs 10-12 lakh, 20% Rs 12-15 lakh, 30% above Rs 15 lakh. Rs 4 lakh standard deduction available.",
+      "risk_level": "high",
+      "keywords": ["3 lakh", "7 lakh", "5%", "10%", "15%", "20%", "30%", "standard deduction"],
+      "numbers": ["3", "7", "10", "12", "15", "5", "20", "30", "4"],
+      "source": "Finance Act 2024, Section 115BAC",
+      "financial_impact": "Incorrect salary structuring and tax deduction"
+    },
+    {
+      "id": "FIN_009",
+      "prompt": "What is the time limit for issuing GST invoice for services?",
+      "ground_truth": "Invoice must be issued within 30 days from date of supply of service. For banking and insurance companies, the limit is 45 days.",
+      "risk_level": "medium",
+      "keywords": ["30 days", "45 days", "banking", "insurance"],
+      "numbers": ["30", "45"],
+      "source": "CGST Rules 2017, Rule 47",
+      "financial_impact": "Non-compliance leads to demand and penalty"
+    },
+    {
+      "id": "FIN_010",
+      "prompt": "What is the threshold for mandatory tax audit under Section 44AB?",
+      "ground_truth": "Tax audit mandatory if turnover exceeds Rs 1 crore for business (Rs 10 crore if cash transactions below 5%). For professionals, limit is Rs 50 lakhs. Extended to Rs 2 crore for those opting Section 44AD presumptive scheme.",
+      "risk_level": "high",
+      "keywords": ["1 crore", "10 crore", "50 lakhs", "44AB", "44AD", "5%"],
+      "numbers": ["1", "10", "50", "2"],
+      "source": "Income Tax Act Section 44AB, Finance Act 2021",
+      "financial_impact": "Penalty of 0.5% of turnover for non-compliance"
+    }
+  ],
+  "HR": [
+    {
+      "id": "HR_001",
+      "prompt": "What is the gratuity calculation formula under Payment of Gratuity Act India?",
+      "ground_truth": "Gratuity = (Last drawn salary x 15 x Years of service) / 26. Applicable after 5 years of continuous service. Maximum gratuity is Rs 20 lakhs.",
+      "risk_level": "high",
+      "keywords": ["15", "26", "5 years", "20 lakhs"],
+      "numbers": ["15", "26", "5", "20"],
+      "source": "Payment of Gratuity Act 1972",
+      "financial_impact": "Underpayment leads to interest at 10% per annum"
+    },
+    {
+      "id": "HR_002",
+      "prompt": "What are the maternity leave entitlements under Maternity Benefit Amendment Act 2017?",
+      "ground_truth": "26 weeks paid maternity leave for first two children; 12 weeks for third child onwards. Mandatory creche facility for establishments with 50 or more employees.",
+      "risk_level": "high",
+      "keywords": ["26 weeks", "12 weeks", "two children", "50 employees", "creche"],
+      "numbers": ["26", "12", "2", "50"],
+      "source": "Maternity Benefit Amendment Act 2017",
+      "financial_impact": "Non-compliance: imprisonment up to 1 year or fine up to Rs 5000"
+    },
+    {
+      "id": "HR_003",
+      "prompt": "What is the retrenchment notice period requirement under Industrial Disputes Act for companies with more than 100 workers?",
+      "ground_truth": "Companies with 100 or more workmen must give 90 days notice and obtain government permission before retrenchment. Companies with less than 100 workers need only 15 days notice.",
+      "risk_level": "high",
+      "keywords": ["100 workers", "90 days", "government permission", "15 days"],
+      "numbers": ["100", "90", "15"],
+      "source": "Industrial Disputes Act 1947, Section 25N",
+      "financial_impact": "Illegal retrenchment: reinstatement with back wages"
+    },
+    {
+      "id": "HR_004",
+      "prompt": "What is the ESI contribution rate for employer and employee in India?",
+      "ground_truth": "Employee contribution is 0.75% of wages. Employer contribution is 3.25% of wages. Applicable for employees earning up to Rs 21,000 per month.",
+      "risk_level": "high",
+      "keywords": ["0.75%", "3.25%", "21,000"],
+      "numbers": ["0.75", "3.25", "21000"],
+      "source": "ESI Act 1948, ESI Corporation",
+      "financial_impact": "Default leads to 12% interest + damages up to 25%"
+    },
+    {
+      "id": "HR_005",
+      "prompt": "What are the working hours limits under the Shops and Establishments Act for commercial establishments?",
+      "ground_truth": "Maximum 9 hours per day and 48 hours per week. Overtime not to exceed 2 hours per day; overtime wages at twice the regular rate. Rules vary slightly by state.",
+      "risk_level": "medium",
+      "keywords": ["9 hours", "48 hours", "2 hours", "twice", "overtime"],
+      "numbers": ["9", "48", "2"],
+      "source": "Shops and Establishments Acts (State-wise)",
+      "financial_impact": "Penalty varies by state, typically Rs 5,000 to Rs 50,000"
+    },
+    {
+      "id": "HR_006",
+      "prompt": "What is the minimum wage for unskilled workers in Delhi as of 2024?",
+      "ground_truth": "Rs 17,494 per month for unskilled workers in Delhi as of April 2024 (revised periodically by Delhi government).",
+      "risk_level": "medium",
+      "keywords": ["17,494", "unskilled", "Delhi", "2024"],
+      "numbers": ["17494"],
+      "source": "Delhi Minimum Wages Notification 2024",
+      "financial_impact": "Non-payment: fine up to Rs 10,000 and/or 6 months imprisonment"
+    },
+    {
+      "id": "HR_007",
+      "prompt": "Under POSH Act 2013, what is the mandatory composition of the Internal Complaints Committee?",
+      "ground_truth": "ICC must have minimum 4 members: a Presiding Officer who is a senior woman employee, minimum 2 employees committed to women's causes, and 1 external member from NGO or legal background. Presiding Officer and half of ICC members must be women.",
+      "risk_level": "high",
+      "keywords": ["4 members", "Presiding Officer", "woman", "NGO", "external member"],
+      "numbers": ["4"],
+      "source": "Sexual Harassment of Women at Workplace Act 2013, Section 4",
+      "financial_impact": "Non-compliance: fine up to Rs 50,000; repeat offence doubles penalty"
+    },
+    {
+      "id": "HR_008",
+      "prompt": "What is the bonus payment obligation under Payment of Bonus Act India?",
+      "ground_truth": "Minimum bonus of 8.33% of salary or Rs 100 whichever is higher; maximum 20% of salary. Applicable to employees earning up to Rs 21,000 per month. Bonus must be paid within 8 months of closing of accounting year.",
+      "risk_level": "medium",
+      "keywords": ["8.33%", "20%", "Rs 21,000", "8 months"],
+      "numbers": ["8.33", "20", "21000", "8"],
+      "source": "Payment of Bonus Act 1965",
+      "financial_impact": "Non-payment: imprisonment up to 6 months or fine up to Rs 1,000"
+    },
+    {
+      "id": "HR_009",
+      "prompt": "What notice is required for lay-off compensation under Industrial Disputes Act?",
+      "ground_truth": "Laid off workmen are entitled to 50% of total basic wages and dearness allowance for lay-off period. Workmen must report to workplace each day during lay-off. Not applicable if lay-off due to natural calamity.",
+      "risk_level": "high",
+      "keywords": ["50%", "basic wages", "dearness allowance"],
+      "numbers": ["50"],
+      "source": "Industrial Disputes Act 1947, Section 25C",
+      "financial_impact": "Liability for full compensation plus interest"
+    },
+    {
+      "id": "HR_010",
+      "prompt": "What are the mandatory registers a company must maintain under various Indian labour laws?",
+      "ground_truth": "Companies must maintain: Register of Employees (Form B), Wages Register, Overtime Register, Leave Register, Muster Roll, Accident Register (under Factories Act), PF Register (Form 3A, 6A), ESI Register, and Bonus Register. Minimum 5 years retention.",
+      "risk_level": "medium",
+      "keywords": ["Form B", "Wages Register", "5 years", "Muster Roll"],
+      "numbers": ["5"],
+      "source": "Multiple labour laws including Factories Act, ESI Act, EPF Act",
+      "financial_impact": "Non-maintenance: fine Rs 10,000 to Rs 2 lakh depending on law"
+    }
+  ],
+  "Legal": [
+    {
+      "id": "LEG_001",
+      "prompt": "What is the limitation period for filing a commercial contract dispute in India?",
+      "ground_truth": "3 years from the date of breach or when the right to sue accrues, under the Limitation Act 1963. For suits related to contracts under seal, it is 12 years.",
+      "risk_level": "critical",
+      "keywords": ["3 years", "Limitation Act", "breach", "12 years"],
+      "numbers": ["3", "12"],
+      "source": "Limitation Act 1963, Article 55",
+      "financial_impact": "Claim permanently barred after limitation period"
+    },
+    {
+      "id": "LEG_002",
+      "prompt": "What are the key compliance requirements under India's Digital Personal Data Protection Act 2023?",
+      "ground_truth": "DPDP Act 2023 requires: explicit consent for data processing, appointment of Consent Manager, Data Fiduciary obligations, data minimization, purpose limitation, breach notification within prescribed timeline to Data Protection Board, and rights of Data Principal including right to erasure.",
+      "risk_level": "critical",
+      "keywords": ["consent", "Data Fiduciary", "Data Protection Board", "breach notification", "erasure"],
+      "numbers": [],
+      "source": "DPDP Act 2023",
+      "financial_impact": "Penalty up to Rs 250 crore per breach"
+    },
+    {
+      "id": "LEG_003",
+      "prompt": "What is the maximum penalty under Consumer Protection Act 2019 for misleading advertisements?",
+      "ground_truth": "Rs 10 lakhs for first offence; Rs 50 lakhs for subsequent offences. Endorsers can be prohibited from endorsing for 1 to 3 years. Manufacturer/service provider may also face imprisonment up to 2 years.",
+      "risk_level": "high",
+      "keywords": ["10 lakhs", "50 lakhs", "1 to 3 years", "2 years imprisonment"],
+      "numbers": ["10", "50", "1", "3", "2"],
+      "source": "Consumer Protection Act 2019, Section 21",
+      "financial_impact": "Brand damage plus statutory penalties"
+    },
+    {
+      "id": "LEG_004",
+      "prompt": "Under Companies Act 2013, what is the quorum required for a Board meeting?",
+      "ground_truth": "Quorum is 1/3 of total strength or 2 directors, whichever is higher. Minimum quorum is 2 directors. For listed companies, at least 1/3 of directors must be independent.",
+      "risk_level": "high",
+      "keywords": ["1/3", "2 directors", "independent", "quorum"],
+      "numbers": ["2"],
+      "source": "Companies Act 2013, Section 174",
+      "financial_impact": "Board decisions void if quorum not met"
+    },
+    {
+      "id": "LEG_005",
+      "prompt": "What are the stamp duty implications on share purchase agreements in Maharashtra?",
+      "ground_truth": "Stamp duty on share transfer is 0.015% of consideration or market value whichever is higher in Maharashtra. For SPA/SHA, stamp duty is 0.1% of the higher of consideration or market value, subject to a maximum of Rs 25 crore.",
+      "risk_level": "critical",
+      "keywords": ["0.015%", "0.1%", "25 crore", "Maharashtra"],
+      "numbers": ["0.015", "0.1", "25"],
+      "source": "Maharashtra Stamp Act",
+      "financial_impact": "Underpaid stamp duty: penalty 2-10 times deficient amount"
+    },
+    {
+      "id": "LEG_006",
+      "prompt": "What is the mandatory arbitration clause requirement under the Commercial Courts Act 2015?",
+      "ground_truth": "Under Commercial Courts Act 2015, pre-institution mediation is mandatory before filing commercial suit unless urgent relief is sought. Arbitration is voluntary but mediation window is 3 months (extendable by 2 months).",
+      "risk_level": "high",
+      "keywords": ["pre-institution mediation", "3 months", "2 months", "urgent relief"],
+      "numbers": ["3", "2"],
+      "source": "Commercial Courts Act 2015, Section 12A",
+      "financial_impact": "Suit can be rejected without prior mediation attempt"
+    },
+    {
+      "id": "LEG_007",
+      "prompt": "What is the period for which a non-compete clause is legally enforceable in India?",
+      "ground_truth": "Non-compete clauses during employment are enforceable. Post-employment non-compete clauses are generally NOT enforceable in India under Section 27 of Indian Contract Act as restraint of trade. Courts have consistently struck down post-employment non-competes.",
+      "risk_level": "critical",
+      "keywords": ["Section 27", "restraint of trade", "not enforceable", "post-employment"],
+      "numbers": ["27"],
+      "source": "Indian Contract Act 1872, Section 27",
+      "financial_impact": "Wrongful enforcement leads to damages and injunction"
+    },
+    {
+      "id": "LEG_008",
+      "prompt": "What is the compulsory winding up process under Insolvency and Bankruptcy Code 2016?",
+      "ground_truth": "Under IBC 2016, CIRP (Corporate Insolvency Resolution Process) is initiated by financial/operational creditor or corporate debtor. Moratorium declared on Day 1. Resolution must be completed in 180 days (extendable to 270 days). If no resolution plan, liquidation ordered.",
+      "risk_level": "critical",
+      "keywords": ["CIRP", "180 days", "270 days", "moratorium", "liquidation"],
+      "numbers": ["180", "270"],
+      "source": "Insolvency and Bankruptcy Code 2016",
+      "financial_impact": "Directors personally liable for fraudulent trading"
+    },
+    {
+      "id": "LEG_009",
+      "prompt": "What are the requirements for a valid arbitration agreement under the Arbitration and Conciliation Act?",
+      "ground_truth": "Arbitration agreement must be in writing (includes electronic records). Can be in form of arbitration clause in contract or separate agreement. Must clearly indicate intention to refer disputes to arbitration. Parties must agree on arbitrator appointment process.",
+      "risk_level": "high",
+      "keywords": ["writing", "electronic records", "intention", "arbitrator"],
+      "numbers": [],
+      "source": "Arbitration and Conciliation Act 1996, Section 7",
+      "financial_impact": "Invalid clause means disputes go to court"
+    },
+    {
+      "id": "LEG_010",
+      "prompt": "What are the director disqualification provisions under Companies Act 2013?",
+      "ground_truth": "Director disqualified if: company defaults on filing financial statements/annual returns for 3 consecutive years, company fails to repay deposits or debentures. Disqualification period is 5 years. MCA21 portal provides disqualification list.",
+      "risk_level": "high",
+      "keywords": ["3 consecutive years", "5 years", "deposits", "debentures", "disqualified"],
+      "numbers": ["3", "5"],
+      "source": "Companies Act 2013, Section 164",
+      "financial_impact": "All directorships void; personal liability for company acts"
+    }
+  ],
+  "Marketing": [
+    {
+      "id": "MKT_001",
+      "prompt": "What are the ASCI guidelines for influencer marketing disclosures in India?",
+      "ground_truth": "ASCI requires all paid promotions to disclose material connection using labels like #Ad, #Sponsored, #Collab, #Partnership at the beginning of content. Must be prominent, upfront, and not buried in hashtags. Video disclosures must be verbal and visual.",
+      "risk_level": "high",
+      "keywords": ["#Ad", "#Sponsored", "beginning", "prominent", "verbal"],
+      "numbers": [],
+      "source": "ASCI Guidelines for Influencer Advertising 2021",
+      "financial_impact": "ASCI complaint, brand reputation damage, potential CCPA action"
+    },
+    {
+      "id": "MKT_002",
+      "prompt": "What is the FDI limit in multi-brand retail trading in India?",
+      "ground_truth": "51% FDI permitted in multi-brand retail under government approval route. Conditions: minimum $100 million investment, 30% local sourcing from Indian small industries, retail outlets only in cities with population over 10 lakh.",
+      "risk_level": "high",
+      "keywords": ["51%", "100 million", "30%", "10 lakh", "government approval"],
+      "numbers": ["51", "100", "30", "10"],
+      "source": "FDI Policy, DIPP, Consolidated FDI Policy 2020",
+      "financial_impact": "Violation: FEMA penalties, forced exit"
+    },
+    {
+      "id": "MKT_003",
+      "prompt": "What is the market size of India's quick commerce industry in 2024?",
+      "ground_truth": "India's quick commerce market was estimated at approximately $3.3 billion in 2024, with Swiggy Instamart, Blinkit (Zomato), and Zepto as major players. Growing at approximately 40% CAGR.",
+      "risk_level": "low",
+      "keywords": ["3.3 billion", "quick commerce", "Blinkit", "Zepto", "40%"],
+      "numbers": ["3.3", "40"],
+      "source": "Redseer, IBEF, Bain & Company India Consumer Reports 2024",
+      "financial_impact": "Market sizing errors in business plans and investor decks"
+    },
+    {
+      "id": "MKT_004",
+      "prompt": "What are the legal requirements for running a lottery or contest promotion in India?",
+      "ground_truth": "Lotteries are regulated by Lotteries Regulation Act 1998; only 13 states allow lotteries. Skill-based contests are permitted but must genuinely test skill. Prize competitions with purchase requirement are regulated. Online games of chance may attract GST at 28%.",
+      "risk_level": "high",
+      "keywords": ["Lotteries Regulation Act", "13 states", "skill-based", "28%"],
+      "numbers": ["13", "28", "1998"],
+      "source": "Lotteries Regulation Act 1998, Prize Competition Act",
+      "financial_impact": "Illegal lottery: imprisonment up to 2 years"
+    },
+    {
+      "id": "MKT_005",
+      "prompt": "What are the restrictions on comparative advertising under Indian law?",
+      "ground_truth": "Comparative advertising is permitted if comparisons are truthful, accurate, verifiable and not misleading. Must compare like with like. Cannot denigrate competitor products. Regulated by ASCI Code and Consumer Protection Act 2019. Comparative claims must be substantiated.",
+      "risk_level": "medium",
+      "keywords": ["truthful", "verifiable", "denigrate", "substantiated", "ASCI"],
+      "numbers": [],
+      "source": "ASCI Code, Consumer Protection Act 2019",
+      "financial_impact": "Injunction, damages for disparagement"
+    },
+    {
+      "id": "MKT_006",
+      "prompt": "What is the Cable TV Networks Regulation Act provision for advertising standards?",
+      "ground_truth": "All advertisements on cable TV must comply with Programme and Advertising Codes under Cable TV Networks (Regulation) Act 1995. Ads must not offend decency, not encourage violence, not mislead consumers. ASCI codes apply. Time limit: not more than 12 minutes of ads per hour.",
+      "risk_level": "medium",
+      "keywords": ["12 minutes", "Cable TV Networks Act", "ASCI", "decency"],
+      "numbers": ["12"],
+      "source": "Cable TV Networks Regulation Act 1995",
+      "financial_impact": "Channels fined; ads taken down"
+    },
+    {
+      "id": "MKT_007",
+      "prompt": "What is the India e-commerce market size forecast for 2026?",
+      "ground_truth": "India e-commerce market projected at approximately $150-200 billion by 2026 (IBEF, Bain-Google-Temasek Internet Economy report). India has approximately 220-230 million online shoppers as of 2024.",
+      "risk_level": "low",
+      "keywords": ["150", "200 billion", "220", "230 million"],
+      "numbers": ["150", "200", "220", "230"],
+      "source": "IBEF, Bain India Internet Economy Report",
+      "financial_impact": "Market sizing errors"
+    },
+    {
+      "id": "MKT_008",
+      "prompt": "What are the SEBI regulations on celebrity endorsements for financial products?",
+      "ground_truth": "SEBI guidelines require celebrities endorsing mutual funds or investment products to ensure claims are fair and not misleading. Celebrities cannot endorse products of entities that are SEBI debarred. Past performance disclaimers mandatory. SEBI can take action against misleading endorsements.",
+      "risk_level": "high",
+      "keywords": ["SEBI", "fair", "misleading", "debarred", "past performance"],
+      "numbers": [],
+      "source": "SEBI Circular on Advertisements 2023",
+      "financial_impact": "Regulatory action, debarment, refund orders"
+    },
+    {
+      "id": "MKT_009",
+      "prompt": "What is the drug advertisement regulation in India for OTC products?",
+      "ground_truth": "Drugs and Magic Remedies (Objectionable Advertisements) Act 1954 prohibits advertisements claiming to cure specified diseases. OTC drug ads must be approved by Drug Controller. Cannot claim to treat cancer, epilepsy, insanity, etc. Magic remedy claims prohibited.",
+      "risk_level": "high",
+      "keywords": ["1954", "Drug Controller", "prohibited", "cancer", "epilepsy"],
+      "numbers": ["1954"],
+      "source": "Drugs and Magic Remedies Act 1954",
+      "financial_impact": "Imprisonment up to 6 years for repeat offence"
+    },
+    {
+      "id": "MKT_010",
+      "prompt": "What is the email marketing legal requirement under India's IT Act and TRAI regulations?",
+      "ground_truth": "TRAI's Telecom Commercial Communications Customer Preference Regulations (TCCCPR) 2018 governs commercial communications. For email: must have unsubscribe option, cannot send to DND registered users (for transactional vs promotional classification). DPDP Act 2023 now requires explicit consent.",
+      "risk_level": "medium",
+      "keywords": ["TCCCPR 2018", "unsubscribe", "DND", "DPDP", "explicit consent"],
+      "numbers": ["2018"],
+      "source": "TRAI TCCCPR 2018, DPDP Act 2023",
+      "financial_impact": "Penalty under IT Act and TRAI regulations"
+    }
+  ],
+  "Operations": [
+    {
+      "id": "OPS_001",
+      "prompt": "What are the maximum working hours under the Factories Act 1948 in India?",
+      "ground_truth": "Maximum 9 hours per day and 48 hours per week. Overtime cannot exceed 50 hours per quarter (in some states 75 hours). Overtime wages must be paid at twice the ordinary rate.",
+      "risk_level": "high",
+      "keywords": ["9 hours", "48 hours", "50 hours", "twice", "overtime"],
+      "numbers": ["9", "48", "50", "75"],
+      "source": "Factories Act 1948, Sections 51, 54, 59",
+      "financial_impact": "Fine up to Rs 2 lakh; repeat offence leads to imprisonment"
+    },
+    {
+      "id": "OPS_002",
+      "prompt": "What is the mandatory annual audit requirement for companies under Companies Act 2013?",
+      "ground_truth": "All companies must appoint statutory auditor. Auditor holds office for 5 years. No individual auditor can serve same company for more than 5 consecutive years. Listed companies and large unlisted companies must rotate audit firms every 10 years.",
+      "risk_level": "high",
+      "keywords": ["5 years", "10 years", "rotate", "statutory auditor"],
+      "numbers": ["5", "10"],
+      "source": "Companies Act 2013, Section 139",
+      "financial_impact": "Auditor appointment default: Rs 25,000 to Rs 5 lakh penalty"
+    },
+    {
+      "id": "OPS_003",
+      "prompt": "What is the GeM portal mandatory procurement rule for government PSUs in India?",
+      "ground_truth": "As per GFR 2017 Rule 149, government buyers must mandatorily procure from GeM for goods/services available on portal. No monetary threshold for mandatory procurement; all standardised products available on GeM must be sourced from GeM.",
+      "risk_level": "medium",
+      "keywords": ["GFR 2017", "Rule 149", "mandatory", "government"],
+      "numbers": ["149"],
+      "source": "GFR 2017 Rule 149, GeM Portal Guidelines",
+      "financial_impact": "Audit objection; procurement voided"
+    },
+    {
+      "id": "OPS_004",
+      "prompt": "What are the inventory valuation methods permitted under Indian GAAP (Ind AS 2)?",
+      "ground_truth": "Ind AS 2 permits FIFO (First-In-First-Out) and Weighted Average Cost methods. LIFO (Last-In-First-Out) is NOT permitted under Ind AS 2. Inventories valued at lower of cost or net realizable value (NRV).",
+      "risk_level": "high",
+      "keywords": ["FIFO", "Weighted Average", "LIFO not permitted", "NRV", "Ind AS 2"],
+      "numbers": [],
+      "source": "Ind AS 2 Inventories, ICAI",
+      "financial_impact": "Financial statement misstatement; audit qualification"
+    },
+    {
+      "id": "OPS_005",
+      "prompt": "What is the GST reverse charge mechanism applicable for legal services?",
+      "ground_truth": "Legal services provided by individual advocates (including senior advocates) to business entities attract GST under Reverse Charge Mechanism (RCM). Business entity must pay 18% GST directly to government. Law firms are also covered.",
+      "risk_level": "critical",
+      "keywords": ["Reverse Charge", "RCM", "18%", "advocates", "business entity"],
+      "numbers": ["18"],
+      "source": "GST Notification 13/2017-Central Tax (Rate)",
+      "financial_impact": "Non-payment of RCM: penalty + interest at 18% per annum"
+    },
+    {
+      "id": "OPS_006",
+      "prompt": "What are the fire safety NOC requirements for commercial buildings in India?",
+      "ground_truth": "Fire NOC mandatory for buildings above 15 meters height (stilt+4 floors approx) and assembly buildings above 200 sqm. NOC from State Fire Department required before occupancy. Annual renewal required. Requirements vary by state National Building Code 2016.",
+      "risk_level": "high",
+      "keywords": ["15 meters", "200 sqm", "Fire Department", "NOC", "National Building Code"],
+      "numbers": ["15", "200"],
+      "source": "National Building Code 2016, State Fire Service Acts",
+      "financial_impact": "Sealing of premises; criminal liability in case of fire accident"
+    },
+    {
+      "id": "OPS_007",
+      "prompt": "What is the process and timeline for obtaining an Import Export Code (IEC) in India?",
+      "ground_truth": "IEC is issued by DGFT (Directorate General of Foreign Trade). Online application on DGFT portal with PAN, bank details, digital signature. IEC typically issued within 2-3 working days. No renewal required; permanent code. Fee is Rs 500.",
+      "risk_level": "medium",
+      "keywords": ["DGFT", "PAN", "2-3 working days", "Rs 500", "permanent"],
+      "numbers": ["2", "3", "500"],
+      "source": "Foreign Trade Policy 2023, DGFT IEC Guidelines",
+      "financial_impact": "Cannot import/export without IEC; goods detained"
+    },
+    {
+      "id": "OPS_008",
+      "prompt": "What is the mandatory CSR spending requirement under Companies Act 2013?",
+      "ground_truth": "Companies with net worth Rs 500 crore or more, OR turnover Rs 1000 crore or more, OR net profit Rs 5 crore or more must spend 2% of average net profit of last 3 years on CSR activities. Unspent amount to be transferred to a fund within 6 months.",
+      "risk_level": "high",
+      "keywords": ["500 crore", "1000 crore", "5 crore", "2%", "6 months", "3 years"],
+      "numbers": ["500", "1000", "5", "2", "6", "3"],
+      "source": "Companies Act 2013, Section 135",
+      "financial_impact": "Penalty: 2 times unspent amount; officer imprisonment up to 3 years"
+    },
+    {
+      "id": "OPS_009",
+      "prompt": "What are the mandatory licenses required to start a food manufacturing business in India?",
+      "ground_truth": "Required licenses: FSSAI Central License (turnover above Rs 20 crore) or State License (Rs 12-20 crore) or Registration (below Rs 12 crore), GST Registration, Factory License, Fire NOC, Trade License from local body, Pollution Control Board consent for large units.",
+      "risk_level": "high",
+      "keywords": ["FSSAI", "20 crore", "12 crore", "Factory License", "Fire NOC"],
+      "numbers": ["20", "12"],
+      "source": "Food Safety and Standards Act 2006, FSSAI Regulations",
+      "financial_impact": "Operations closure; fine up to Rs 10 lakh for operating without FSSAI"
+    },
+    {
+      "id": "OPS_010",
+      "prompt": "What is the return filing deadline for GST annual return GSTR-9?",
+      "ground_truth": "GSTR-9 annual return must be filed by 31st December of the subsequent financial year. For FY 2023-24, deadline is 31 December 2024. Mandatory for all regular taxpayers with annual turnover above Rs 2 crore. Late fee Rs 200 per day, maximum 0.25% of turnover.",
+      "risk_level": "high",
+      "keywords": ["31 December", "Rs 2 crore", "Rs 200 per day", "0.25%", "GSTR-9"],
+      "numbers": ["2", "200", "0.25"],
+      "source": "CGST Act Section 44, GST Council Notifications",
+      "financial_impact": "Late fee accumulation; assessment proceedings"
+    }
+  ]
+}
